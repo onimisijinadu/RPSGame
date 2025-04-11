@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <head>
+      <h1>Welcome to Lebuy RPS</h1>
+    </head>
+    <main>
+      <div class="game">
+        <article>Click the Play Button to Start the game</article>
+        <div id="gameActive">
+          <h3>
+            Please type either "Rock", "Papper" or "Scissors" in the filed
+            provided below 👇👇
+          </h3>
+          <input
+            type="text"
+            id="choice"
+            placeholder="Please enter your Choice"
+          />
+          <p id="yourChoice"></p>
+          <p id="computerChoice"></p>
+          <p id="result"></p>
+          <p id="gameStatus"></p>
+        </div>
+        <div id="gameOn">
+          <p>Do You Want to continue Playing?</p>
+          <button id="yes" onclick="yes()">Yes</button>
+          <button id="no" onclick="no()">No</button>
+        </div>
+      </div>
+      <button id="play">Play ❤️</button>
+      <button id="submit" onclick="getUserChoice()">Submit</button>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
