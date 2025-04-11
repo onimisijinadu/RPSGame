@@ -28,7 +28,7 @@ function getComputerChoice() {
   return choices[randomchoice].toUpperCase();
 }
 function getUserChoice() {
-  const input = document.getElementById("choice").value.toUpperCase();
+  const input = document.getElementById("choice").value.trim().toUpperCase();
   const yourChoice = document.getElementById("yourChoice");
   if (input === "ROCK" || input == "PAPER" || input == "SCISSORS") {
     yourChoice.textContent = `You choose: ${input}`;
