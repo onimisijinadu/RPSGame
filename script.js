@@ -3,7 +3,7 @@ let gameActive = document.getElementById("gameActive");
 let showing = document.getElementById("choice");
 let article = document.querySelector("article");
 let submit = document.getElementById("submit");
-const choices = ["rock", "papper", "scissors"];
+const choices = ["rock", "paper", "scissors"];
 const result = document.getElementById("result");
 const playAgain = document.getElementById("gameOn");
 let humanScore = 0;
@@ -30,12 +30,12 @@ function getComputerChoice() {
 function getUserChoice() {
   const input = document.getElementById("choice").value.toUpperCase();
   const yourChoice = document.getElementById("yourChoice");
-  if (input === "ROCK" || input == "PAPPER" || input == "SCISSORS") {
+  if (input === "ROCK" || input == "PAPER" || input == "SCISSORS") {
     yourChoice.textContent = `You choose: ${input}`;
     return input;
   } else {
     yourChoice.textContent =
-      'Invalid choice please Enter "Rock", "Papper" or "Scissors" ';
+      'Invalid choice please Enter "Rock", "Paper" or "Scissors" ';
     return null;
   }
   // input.value = "";
@@ -52,8 +52,8 @@ function playround() {
         result.textContent = `Round ${round + 1}: its a tie!`;
       } else if (
         (userChoice === "ROCK" && computerChoice === "SCISSORS") ||
-        (userChoice === "PAPPER" && computerChoice === "ROCK") ||
-        (userChoice === "SCISSORS" && computerChoice === "PAPPER")
+        (userChoice === "PAPER" && computerChoice === "ROCK") ||
+        (userChoice === "SCISSORS" && computerChoice === "PAPER")
       ) {
         humanScore++;
         result.textContent = `Round ${
